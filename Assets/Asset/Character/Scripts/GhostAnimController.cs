@@ -4,13 +4,13 @@ public class GhostAnimController : MonoBehaviour
 {
     private Animator animator;
     private Opening _opening;
-    private WinEnding _ending; 
+    
 
     void Start()
     {
         animator = GetComponent<Animator>();
         _opening = GetComponent<Opening>();
-        _ending = GetComponent<WinEnding>();
+        
         //SetVisible(false);
     }
 
@@ -47,6 +47,6 @@ public class GhostAnimController : MonoBehaviour
             animator.SetTrigger("TriggerEndWin");
         else
             animator.SetTrigger("TriggerEndLose");
-            _ending?.StartDissolve();
+            
     }
 }

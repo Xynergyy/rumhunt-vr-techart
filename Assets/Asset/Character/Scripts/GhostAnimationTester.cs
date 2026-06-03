@@ -8,7 +8,7 @@ public class GhostAnimationController : MonoBehaviour
     [Header("Timing (วิ)")]
     public float idlePoseTime = 0.17f;
     public float danceTime = 9.00f;
-    public float actionTime = 2.25f;
+    public float actionTime = 2.25f; 
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class GhostAnimationController : MonoBehaviour
         while (true)
         {
             // 1. สุ่ม Dance
-            int danceIdx = Random.Range(0, 5); // 0-4
+            int danceIdx = Random.Range(1, 5); // 0-4
             animator.SetInteger("DanceIndex", danceIdx);
             animator.SetTrigger("TriggerDance"); // <-- ต้องมีตัวนี้
             yield return new WaitForSeconds(danceTime);
@@ -34,7 +34,7 @@ public class GhostAnimationController : MonoBehaviour
             yield return new WaitForSeconds(idlePoseTime);
 
             // 3. สุ่ม Action
-            int action = Random.Range(0, 4);
+            int action = Random.Range(1, 4);
             switch (action)
             {
                 case 0:
