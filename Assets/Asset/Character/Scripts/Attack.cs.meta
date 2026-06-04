@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - attack1VFX: {fileID: 6882116249847192011, guid: c4b2ddd78a478394da66879a43e7af99, type: 3}
   - attack2VFX: {fileID: 6882116249847192011, guid: c4b2ddd78a478394da66879a43e7af99, type: 3}
-  - vfxSpawnPoint: {fileID: 170627752090198096, guid: 71b863ab7646d36419ecaf9e8825673c, type: 3}
+  - vfxSpawnPoint: {fileID: 7956816681932247584, guid: 6ba99c26dbe619a49af0789560be28a1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

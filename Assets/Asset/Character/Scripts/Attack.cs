@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
             Quaternion customRotation = vfxSpawnPoint.transform.rotation * Quaternion.Euler(0, 0, angleZ);
             GameObject fx = Instantiate(attack1VFX, vfxSpawnPoint.transform.position, customRotation);
 
-            Destroy(fx, 2f); // อมตะ 2 วินาที
+            Destroy(fx, 0.8f); 
         }
     }
 
@@ -44,7 +44,7 @@ public class Attack : MonoBehaviour
             GameObject fx = Instantiate(attack2VFX, spawnPosition, customRotation);
 
             // 4. ปรับขนาดให้เล็กตัวลง และพลิกด้านแกน X เพื่อให้ปาดขึ้นเฉียงขวา
-            float sizeMultiplier = 0.5f;
+            float sizeMultiplier = 1f;
             Vector3 currentScale = fx.transform.localScale;
             fx.transform.localScale = new Vector3(
                 -currentScale.x * sizeMultiplier,
@@ -53,7 +53,7 @@ public class Attack : MonoBehaviour
             );
 
             // 5. เวลาทำลาย (Destroy) ให้สั้นลง
-            Destroy(fx, 0.8f);
+            Destroy(fx, 0.4f);
         }
     }
 }
